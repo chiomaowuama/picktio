@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap');
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+.cursor{
+    width:1px;  
+}
+.typing{
+    animation:none;
+}
+.updown-enter-from{
+    opacity:0;
+    transform: translateY(-90px);
+}
+.updown-enter-to{
+    opacity:1;
+    transform: translateY(0);
+
+}
+.updown-enter-active{
+transition: all 3s ease;
+}
+/* pushdown */
+.pushdown-enter-from{
+    opacity:0;
+    transform: translateY(120px);
+}
+.pushdown-enter-to{
+    opacity:1;
+    transform: translateY(0);
+
+}
+.pushdown-enter-active{
+transition: all 2s ease;
+}
+/* blue screen moving left */
+.movingleft-enter-from{
+    opacity:0;
+    transform: translateX(400px);
+}
+.movingleft-enter-to{
+    opacity:1;
+    transform: translateX(0);
+
+}
+.movingleft-enter-active{
+transition: all 2s ease;
+}
+/* the second blue */
+.movinglefttwo-enter-from{
+    opacity:0;
+    transform: translateX(400px);
+}
+.movinglefttwo-enter-to{
+    opacity:1;
+    transform: translateX(0);
+
+}
+.movinglefttwo-enter-active{
+transition: all 4s ease;
+}
+/* the thrid blue */
+.movingleftthird-enter-from{
+    opacity:0;
+    transform: translateX(400px);
+}
+.movingleftthird-enter-to{
+    opacity:1;
+    transform: translateX(0);
+
+}
+.movingleftthird-enter-active{
+transition: all 5s ease;
+}
+/* moving right third */
+.movingrightthird-enter-from{
+    opacity:0;
+    transform: translateX(-400px);
+}
+.movingrightthird-enter-to{
+    opacity:1;
+    transform: translateX(0);
+
+}
+.movingrightthird-enter-active{
+transition: all 2s ease;
+}
+/* moving right two */
+.movingrighttwo-enter-from{
+    opacity:0;
+    transform: translateX(-400px);
+}
+.movingrighttwo-enter-to{
+    opacity:1;
+    transform: translateX(0);
+
+}
+.movingrighttwo-enter-active{
+transition: all 4s ease;
+}
+/* the moving right one */
+.movingright-enter-from{
+    opacity:0;
+    transform: translateX(-400px);
+}
+.movingright-enter-to{
+    opacity:1;
+    transform: translateX(0);
+
+}
+.movingright-enter-active{
+transition: all 5s ease;
+}
+/* carousel movement */
+.leftmanual-enter-from{
+    opacity:0;
+    transform: translateX(400px);
+}
+.leftmanual-enter-to{
+    opacity:1;
+    transform: translateX(50px);
+
+}
+.leftmanual-enter-active{
+transition: all 4s ease;
+}
+
+/* .fade-leave-from{
+    opacity:1
+}
+.fade-leave-to{
+    opacity: 0;
+}
+.fade-leave-active{
+    transition: all 5s ease;
+} */
+/* fading */
+/* .fade-enter-from{
+    opacity:0;
+ 
+}
+.fade-enter-to{
+    opacity:1;
+    
+
+}
+.fade-enter-active{
+transition: all 15s ease;
+} */
+/* slide  */
+.slider{
+    height:150px;
+    margin: auto;
+    position: relative;
+    /* border:2px solid red; */
+    width:100%;
+    display: grid;
+    place-items:center;
+    overflow: hidden;
+   
+}
+.slide-track{
+    display: flex;
+    gap: 1.5em;
+    width:100%;
+    background-color: #38373712;;
+    /* border:2px solid red; */
+   
+
+}
+.slide{
+    /* height: 150px; */
+    /* width:250px; */
+    width:max-content;
+    align-items:center;
+    padding:5px;
+    
+    /* border:2px solid yellow; */
+    /* box-shadow: 10px 0px 5px #3837372d; */
+    perspective: 100px;
+    transition:transform 1s;
+
+   
+}
+.imaging{
+  
+    width:100%;
+    /* border-radius: 100%; */
+    display:flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition:transform 3s;
+
+}
+.imaging:hover{
+    transform: translateZ(8px);
+}
+/* .slide img{
+    width:0%;
+    border:2px solid red;
+} */
+.slide:hover{
+    transform: translateZ(20px);
+    /* color:yellow; */
+ 
+}
+.background{
+
+    background-size:cover;
+    background-position: center;
+    /* border:2px solid yellow; */
+    background-repeat: no-repeat;
+    
+    
+}
+.malakai{
+    background-image: url("https://pickt.io/malaika.png");
+}
+.augusta{
+    background-image: url("https://pickt.io/augusta.jpeg");
+}
+.chandra{
+    background-image: url("https://pickt.io/chandra.jpeg");
+}
+.megan{
+    background-image: url("https://pickt.io/megan.jpeg");
+}
+.rotimi{
+    background-image: url("https://pickt.io/rotimi.jpeg");
+}
+.nerlissa{
+    background-image: url("https://pickt.io/nerlissa.jpeg");
+}
+/* manuel slide */
+.wrapper{
+   
+    width:100%;
+}
+.carousel{
+    display:grid;
+    grid-auto-flow: column;
+    
+}
+
+.card{
+    cursor: pointer;
+    /* scroll-behavior: auto; */
+}
+/* questions  */
+/* 1. i dnt knw why my manual slide works on big screen and small screen
+ 2. if i have more than one manual slide one stops working  */
