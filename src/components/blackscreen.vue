@@ -1,10 +1,31 @@
 <script setup>
- import { onMounted, ref } from 'vue';
+ import { computed, onMounted, ref } from 'vue';
  let carousel = ref(null);
  let firstCardWidth = 400;
  let isDragging = ref(false);
  let startX = 0
  let scrollLeftstrart = 0;
+//  getting the number of cards that can fit the carousel at once 
+ let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth)
+
+ const carouselChildren = computed(() => {
+    return [...carousel.value.children]
+ })
+//  insert copiesof the last few cards to begining of carousel for infinite scrolling
+function begginincards(){
+    carouselChildren.value.slice(-cardPerView).reverse().forEach(card => {
+      carousel.value.insertAdjacentHTML("afterbegin", card.outerHTML)
+    });
+}
+
+  //  insert copiesof the first few cards to end of carousel for infinite scrolling
+  function endcards(){
+      carouselChildren.value.slice(0, -cardPerView).forEach(card => {
+        carousel.value.insertAdjacentHTML("beforeend", card.outerHTML)
+      });
+
+}
+
  
 // the slide effect
 const startDrag = (event) =>{
@@ -31,6 +52,20 @@ const arrowBtns = (direction) => {
     if(carousel.value){
         console.log(carousel.value)
         carousel.value.scrollLeft += direction === 'left' ? -firstCardWidth : firstCardWidth;
+     
+    }
+}
+function infiniteScroll(){
+    // console.log(carousel.value.offsetWidth)
+    if(carousel.value.scrollLeft === 0){
+        carousel.value.classList.add("no-transition")
+        carousel.value.scrollLeft = carousel.value.scrollWidth -(2 * carousel.value.offsetWidth)
+        carousel.value.classList.remove("no-transition")
+    }
+    else if (Math.ceil(carousel.value.scrollLeft) === carousel.value.scrollWidth - carousel.value.offsetWidth){
+        carousel.value.classList.add("no-transition")
+        carousel.value.scrollLeft =  carousel.value.offsetWidth
+        carousel.value.classList.remove("no-transition")
     }
 }
 // function arrowBtns(directions){
@@ -63,6 +98,8 @@ const arrowBtns = (direction) => {
         startDrag;
         handleDrag;
         endDrag;
+        begginincards();
+        endcards();
         // arrowBtns;
         
     })
@@ -84,8 +121,8 @@ const arrowBtns = (direction) => {
        
         <!-- the second part -->
         <transition name="leftmanual" appear>
-            <div class=" wrapper " >
-            <div ref="carousel"  class="carousel scroll-smooth auto-cols-max  overflow-hidden   h-full  pl-10  gap-5 md:auto-rows-max " @mousedown="startDrag" @mousemove="handleDrag" @mouseup="endDrag">
+            <div class=" wrapper pb-10 " >
+            <div ref="carousel"  class="carousel scroll-smooth auto-cols-max  snap-mandatory overflow-auto   h-full  pl-10  gap-5 md:auto-rows-max " @mousedown="startDrag" @mousemove="handleDrag" @mouseup="endDrag" @scroll="infiniteScroll()">
                 <div class="card bg-white w-64  md:w-96  rounded-xl p-2">
                     <div class="imgs flex h-60 md:h-80 justify-center rounded-xl items-center p-2 background malakai">
                         <!-- <img class="w-32 md:w-80 md:h-96 rounded-xl " src="https://pickt.io/malaika.png" alt="Malaika Ademola-Majekodunmi" > -->
@@ -213,6 +250,9 @@ const arrowBtns = (direction) => {
            
         </div>
         </transition>
+        <div class="flex justify-center align-middle py-16 ">
+            <button class=" w-36 px-3 py-3 rounded-xl  text-white bg-yellowbg font-semibold font-textstyle text-sm">Discover Experts</button>
+        </div>
        
     </div>
    

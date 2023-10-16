@@ -128,6 +128,10 @@ transition: all 5s ease;
 .leftmanual-enter-active{
 transition: all 4s ease;
 }
+/* infinite scroll */
+.no-transition{
+    scroll-behavior: auto;
+}
 
 /* .fade-leave-from{
     opacity:1
@@ -235,6 +239,34 @@ transition: all 15s ease;
 .nerlissa{
     background-image: url("https://pickt.io/nerlissa.jpeg");
 }
+/* second slide  */
+.orbay{
+    background-image: url("https://pickt.io/orbay.jpeg");
+}
+.alicia{
+    background-image: url("https://pickt.io/alicia.jpeg");
+}
+.shane{
+    background-image: url("https://pickt.io/shane.jpeg");
+}
+.akpovire{
+    background-image: url("https://pickt.io/akpovire.jpeg");
+}
+/* yellow screen */
+.bcone{
+    background-image: url("https://pickt.io/bc1.webp");
+   
+}
+.bctwo{
+    background-image: url("https://pickt.io/bc2.webp");
+   
+}
+.bcthree{
+    background-image: url("https://pickt.io/bc3.webp");
+}
+.bcfour{
+    background-image: url("https://pickt.io/bc4.webp");
+}
 /* manuel slide */
 .wrapper{
    
@@ -243,11 +275,15 @@ transition: all 15s ease;
 .carousel{
     display:grid;
     grid-auto-flow: column;
+    scrollbar-width: 0;
     
 }
-
+.carousel::-webkit-scrollbar{
+    display: none;
+}
 .card{
     cursor: pointer;
+    scroll-snap-align: start ;
     /* scroll-behavior: auto; */
 }
 /* questions  */

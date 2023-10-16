@@ -19,7 +19,9 @@ module.exports = {
         "yellowbg":"#f8ab11",
         "circle":"#8b7be2",
         "greentext":"#04ad68",
-        "blueishtext":"#2dc3f5"
+        "blueishtext":"#2dc3f5",
+        "pinktext":"#ef3867",
+        "hovers":"rgb(251, 250, 250)"
       },
       keyframes:{
         cursorblink:{
