@@ -21,6 +21,10 @@
     transform: translateY(0);
 
 }
+.connect{
+    /* background:#7057fbd2; */
+    /* "connects":"#7057fbd2", */
+}
 .updown-enter-active{
 transition: all 3s ease;
 }
@@ -198,6 +202,7 @@ transition: all 15s ease;
     padding-left: 5px;
     padding-right: 5px;
     transition:transform 3s;
+    
 
 }
 .imaging:hover{
@@ -218,8 +223,6 @@ transition: all 15s ease;
     background-position: center;
     /* border:2px solid yellow; */
     background-repeat: no-repeat;
-    
-    
 }
 .malakai{
     background-image: url("https://pickt.io/malaika.png");
@@ -253,29 +256,45 @@ transition: all 15s ease;
     background-image: url("https://pickt.io/akpovire.jpeg");
 }
 /* yellow screen */
+.backgrounds{
+    background-size:cover;
+    object-fit: fill;
+    background-position: center;
+    /* border:2px solid yellow; */
+    background-repeat: no-repeat;
+    
+}
+.cards{
+    cursor: pointer;
+    scroll-snap-align: start ;
+    /* scroll-behavior: auto; */
+    /* border:2px solid green; */
+    width:300px;
+}
 .bcone{
-    background-image: url("https://pickt.io/bc1.webp");
+    background-image: url("@/assets/bc1.png");
    
 }
 .bctwo{
-    background-image: url("https://pickt.io/bc2.webp");
+    background-image: url("@/assets/b2.png");
    
 }
 .bcthree{
-    background-image: url("https://pickt.io/bc3.webp");
+    background-image: url("@/assets/bc3.png");
 }
 .bcfour{
     background-image: url("https://pickt.io/bc4.webp");
 }
 /* manuel slide */
 .wrapper{
-   
+   /* border:2px solid green; */
     width:100%;
 }
 .carousel{
     display:grid;
     grid-auto-flow: column;
     scrollbar-width: 0;
+    /* border:2px solid green; */
     
 }
 .carousel::-webkit-scrollbar{
@@ -285,6 +304,51 @@ transition: all 15s ease;
     cursor: pointer;
     scroll-snap-align: start ;
     /* scroll-behavior: auto; */
+    /* border:2px solid green; */
+    
+}
+/* pink */
+
+#accodion{
+ 
+    /* border:2px solid red; */
+    /* width:500px; */
+}
+#accodion li{
+    list-style: none;
+    width:100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+#accodion li label{
+    padding: 1%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* font-size: 18px; */
+    /* font-weight: 500; */
+    cursor:pointer;
+    color:black;
+}
+#accodion li label span{
+    transform: rotateX(90deg);
+    font-size: 22px;
+    color:#333;
+
+}
+#accodion label + input[type="radio"]{
+    display:none;
+}
+#accodion .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s;
+}
+#accodion label + input[type="radio"]:checked + .content{
+    max-height: 400px;
 }
 /* questions  */
 /* 1. i dnt knw why my manual slide works on big screen and small screen

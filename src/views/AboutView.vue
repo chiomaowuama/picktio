@@ -6,7 +6,7 @@ import navbar from '../components/navbar.vue'
 
 <template>
   <navbar/>
-  <div class="about">
+  <div class="about bg-red-500 h-screen w-full">
     <h1>This is an about page</h1>
   </div>
 </template>

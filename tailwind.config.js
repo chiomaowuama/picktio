@@ -11,6 +11,7 @@ module.exports = {
         "ptext":"#6d6c75",
         "bgconnect":" #efedfc",
         "connect":"#5e48db",
+        "connects":"#7057fbd2",
         "bgexpress":" #fff8eb",
         "express":"#f8ac12",
         "bgshare":"#e6f6f0",
@@ -21,7 +22,9 @@ module.exports = {
         "greentext":"#04ad68",
         "blueishtext":"#2dc3f5",
         "pinktext":"#ef3867",
-        "hovers":"rgb(251, 250, 250)"
+        "hovers":"rgb(251, 250, 250)",
+        "pinkish":"#fafafa",
+        "lightpinkbg":"#fafafa"
       },
       keyframes:{
         cursorblink:{
@@ -78,6 +81,8 @@ module.exports = {
       xl:"1440px",
     }
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar"),
+  ],
 }
 

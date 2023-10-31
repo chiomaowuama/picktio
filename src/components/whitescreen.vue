@@ -85,7 +85,7 @@ onMounted(() => {
         <!-- first part -->
         <div class=" flex py-16  px-10">
             <div class="text-black w-5/6 md:w-3/6 flex justify-center items-center md:p-16  ">
-                <p class=" text-4xl font-extrabold md:text-7xl  font-textstyle tracking-tighter md:leading-0 ">Engage <span class="text-pinktext">industry big names</span> and all that stuff </p>
+                <p class=" text-4xl font-extrabold md:text-3xl lg:text-6xl  font-textstyle tracking-tighter md:leading-0 ">Engage <span class="text-pinktext">industry big names</span> and all that stuff </p>
             </div>
             <div class="hidden w-3/6 md:flex justify-center space-x-4 pb-16  ">
                 <button class="firstchild self-end border border-pinktext rounded-full p-5  hover:bg-hovers " @click="arrowBtns('left')" id="left"  >
