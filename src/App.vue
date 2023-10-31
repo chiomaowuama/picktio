@@ -11,12 +11,12 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav> -->
 
   
-      <RouterView v-slot="{ Component }">
+      <!-- <RouterView v-slot="{ Component }">
         <transition name="route" mode="out-in">
           <component :is="Component"></component>
         </transition>
-      </RouterView>
-  <!-- <RouterView />  -->
+      </RouterView> -->
+  <RouterView /> 
 </template>
 
 <style >

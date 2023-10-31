@@ -107,7 +107,7 @@ function infiniteScroll(){
 <template>
     <div class="bg-black" >
         <!-- first part -->
-        <div class=" flex py-16  px-10">
+        <div class=" flex py-16  px-10 " >
             <div class="text-white w-5/6 md:w-3/6 flex justify-center items-center md:p-16  ">
                 <p class=" text-4xl font-extrabold md:text-7xl  font-textstyle tracking-tighter md:leading-0">Choose from <span class="text-blueishtext">thousands of experts</span> to consult with </p>
             </div>
@@ -120,8 +120,8 @@ function infiniteScroll(){
         <!-- testing -->
        
         <!-- the second part -->
-        <transition name="leftmanual" appear>
-            <div class=" wrapper pb-10 " >
+        <transition name="leftmanual" appear >
+            <div class=" wrapper pb-10 "  >
             <div ref="carousel"  class="carousel scroll-smooth auto-cols-max  snap-mandatory overflow-auto   h-full  pl-10  gap-5 md:auto-rows-max " @mousedown="startDrag" @mousemove="handleDrag" @mouseup="endDrag" @scroll="infiniteScroll()">
                 <div class="card bg-white w-64  md:w-96  rounded-xl p-2">
                     <div class="imgs flex h-60 md:h-80 justify-center rounded-xl items-center p-2 background malakai">
