@@ -68,31 +68,7 @@ function infiniteScroll(){
         carousel.value.classList.remove("no-transition")
     }
 }
-// function arrowBtns(directions){
-//     directions.forEach(direction => {
 
-        
-//     });
-
-// }
-
-//  const dragging = (event) =>{
-//     if(event){
-//         carousel.value = event.pageX;
-//         scrollLeftstrart = carousel.value;
-//         carousel = scrollLeftstrart;
-
-//     }
-//     else{
-//         console.log(1);
-//     }
-//  }
-
-    // let texts = ref('text');
-    // console.log(texts.value)
-    // function splits(){
-    //     let
-    // }
     onMounted(() => {
        
         startDrag;
